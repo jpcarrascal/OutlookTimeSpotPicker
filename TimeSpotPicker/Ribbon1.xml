@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui">
+
+  <contextMenus>    
+    <contextMenu idMso="ContextMenuCalendarView">
+        <button id="MyContextMenuCalendarView" 
+            label="Copy spot to clipboard" 
+            onAction="copySpot"/>
+    </contextMenu>
+    
+    <contextMenu idMso="ContextMenuCalendarItem">
+      <button id="MyContextMenuCalendarItem"
+          label="Copy spot to clipboard"
+          onAction="copySpot"/>
+    </contextMenu>
+  </contextMenus>
+    
+</customUI>
