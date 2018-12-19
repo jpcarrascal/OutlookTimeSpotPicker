@@ -7,7 +7,6 @@ using Outlook = Microsoft.Office.Interop.Outlook;
 using System.Diagnostics;
 using System.Windows.Forms;
 using System.Globalization;
-using Microsoft.Win32;
 
 namespace TimeSpotPicker
 {
@@ -89,7 +88,14 @@ namespace TimeSpotPicker
                 {
                     timeSpot = "Looks like " + TimeZoneForSched + " is not a valid timezone.";
                 }
-                Clipboard.SetText(timeSpot);
+                Debug.Print(timeSpot);
+                //Clipboard.SetText(timeSpot);
+                Clipboard.SetDataObject(timeSpot, false, 0, 0);
+                Marshal.ReleaseComObject(application);
+                Marshal.ReleaseComObject(view);
+                application = null;
+                view = null;
+                return;
             }
         }
 
