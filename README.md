@@ -18,4 +18,4 @@ If you hold down _Control_ it will use a tab character again but will separate d
 Mon Nov 19th\t02:00am\t02:30am
 ```
 
-These options are useful when pasting into excel so you can have dates and times in different columns.
+These options are useful, for instance, when pasting into Excel so you can have dates and times in different columns. It actually makes a good companion to my [Excel Auto-Paste](https://github.com/jpcarrascal/ExcelAutoPaste) add-in. 
