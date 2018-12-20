@@ -66,14 +66,19 @@ namespace TimeSpotPicker
                         startTime = TimeZoneInfo.ConvertTime(startTime, altTimezone);
                         endTime = TimeZoneInfo.ConvertTime(endTime, altTimezone);
                     }
-
                     if (startTime.Day == endTime.Day)
                     {
                         timeSpot = startTime.DayOfWeek.ToString().Substring(0, 3) + " ";
                         timeSpot += startTime.ToString("MMM", CultureInfo.InvariantCulture) + " ";
-                        timeSpot += ordinal(startTime.Day) + ", ";
+                        if (Control.ModifierKeys == Keys.Shift || Control.ModifierKeys == Keys.Control)
+                            timeSpot += ordinal(startTime.Day) + "\t";
+                        else
+                            timeSpot += ordinal(startTime.Day) + ", ";
                         timeSpot += startTime.ToString(@"hh\:mm");
-                        timeSpot += startTime.ToString("tt", CultureInfo.InvariantCulture).ToLower() + " - ";
+                        if (Control.ModifierKeys == Keys.Control)
+                            timeSpot += startTime.ToString("tt", CultureInfo.InvariantCulture).ToLower() + "\t";
+                        else
+                            timeSpot += startTime.ToString("tt", CultureInfo.InvariantCulture).ToLower() + " - ";
                         timeSpot += endTime.ToString(@"hh\:mm");
                         timeSpot += endTime.ToString("tt", CultureInfo.InvariantCulture).ToLower();
                     }
@@ -88,8 +93,6 @@ namespace TimeSpotPicker
                 {
                     timeSpot = "Looks like " + TimeZoneForSched + " is not a valid timezone.";
                 }
-                Debug.Print(timeSpot);
-                //Clipboard.SetText(timeSpot);
                 Clipboard.SetDataObject(timeSpot, false, 0, 0);
                 Marshal.ReleaseComObject(application);
                 Marshal.ReleaseComObject(view);
