@@ -9,4 +9,13 @@ Mon Nov 19th, 02:00am - 02:30am
 ```
 ## Modifier keys
 
-If you click on "Copy spot to clipboard" while holding _Shift_, a tab character will be used to separate date and time. If you hold down _Control_ it will use a tab character again but will separate date, start time, and end time. These options are useful when pasting into excel so you can have dates and times in different columns.
+If you click on "Copy spot to clipboard" while holding _Shift_, a tab character will be used to separate date and time:
+```
+Mon Nov 19th__\t__02:00am - 02:30am
+```
+If you hold down _Control_ it will use a tab character again but will separate date, start time, and end time:
+```
+Mon Nov 19th__\t__02:00am__\t__02:30am
+```
+
+These options are useful when pasting into excel so you can have dates and times in different columns.
