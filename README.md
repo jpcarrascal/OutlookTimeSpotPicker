@@ -1,8 +1,10 @@
 # OutlookTimeSpotPicker
 Lets you copy time intervals from your Outlook Calendar to the clipboard. Useful for sharing calendar availability with people outside your organization.
 
+<img src="https://github.com/jpcarrascal/OutlookTimeSpotPicker/blob/master/example.png?raw=true" />
+
 ## How to use
-After built and installed, right-click on any spot in Outlook's calendar view. It shows up ther as "Copy spot to clipboard". Click on it and it will do just that. This is a sample of how the time spot will be copied:
+After built and installed, right-click on any spot (either an empty one or an appointment) in Outlook's calendar view. It shows up ther as "Copy spot to clipboard". Click on it and it will do just that. This is a sample of how the time spot will be copied:
 
 ```
 Mon Nov 19th, 02:00am - 02:30am
