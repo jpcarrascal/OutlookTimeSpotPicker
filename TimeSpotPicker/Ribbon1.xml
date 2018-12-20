@@ -11,7 +11,7 @@
     <contextMenu idMso="ContextMenuCalendarItem">
       <button id="MyContextMenuCalendarItem"
           label="Copy spot to clipboard"
-          onAction="copySpot"/>
+          onAction="CopySpot"/>
     </contextMenu>
   </contextMenus>
     

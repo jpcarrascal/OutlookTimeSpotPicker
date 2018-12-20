@@ -43,7 +43,7 @@ namespace TimeSpotPicker
             
         }
 
-        public void copySpot(Office.IRibbonControl control)
+        public void CopySpot(Office.IRibbonControl control)
         {
             // Get selected calendar date
             // Thanks to https://stackoverflow.com/questions/25040715/outlook-addin-get-current-selected-calendar-date
